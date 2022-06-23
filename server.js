@@ -17,6 +17,14 @@ MongoClient.connect(dbConnectionString)
         collection = db.collection('movies')
     })
 
+//MIDDLEWARE
+app.set('view engine', 'ejs') 
+app.use(express.static('public'))
+app.use(express.urlencoded({extended: true}))
+app.use(express.json()) //json use parse the json being sent back and forth
+app.use(cors())
+
+
 //PORT = 8000
 app.listen(process.env.PORT || PORT, () => {  //if 8000 isn't available for Heroku, PORT, () lets Heroku decide where to go.
     console.log(`Server is running on port = ${PORT}`)
