@@ -12,6 +12,7 @@
 //5. Create Port
 
 //----Test Mongo and Port Connection
+//start nodemon by adding "dev": "nodemon server.js" under "scripts" in package.json file. Start nodemon by pressing npm run dev
 
 //6. Set middleware
 

@@ -18,6 +18,6 @@ MongoClient.connect(dbConnectionString)
     })
 
 //PORT = 8000
-app.listen(process.env.PORT || PORT, () => {
-    console.log(`Server is running on port`)
+app.listen(process.env.PORT || PORT, () => {  //if 8000 isn't available for Heroku, PORT, () lets Heroku decide where to go.
+    console.log(`Server is running on port = ${PORT}`)
 })
